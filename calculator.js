@@ -41,9 +41,9 @@ function update() {
 // calculate the monthly payment. The output should be a string
 // that always has 2 decimal places.
 function calculateMonthlyPayment(values) {
-  P = amount;
-  i = rate / 12;
-  n = years * 12;
+  let P = values.amount;
+  let i = values.rate / 12;
+  let n = values.years * 12;
   return `${((P * i) / (1 - ((1 + i) ** (-n)))).toFixed(2)}`
 }
 
